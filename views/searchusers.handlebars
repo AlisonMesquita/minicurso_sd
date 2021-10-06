@@ -1,0 +1,22 @@
+<h1>Procurar Usuários</h1>
+<!-- Checa se ocorreu algum erro na pesquisa, caso tenha ocorrido, o erro é destacado na view avisando que nenhum usuário foi encontrado -->
+{{#if error}} <span>{{error}}</span>{{/if}}
+
+<form class="form" method="POST" action="/user/search">
+  <input type="text" name="id" class="form-control" placeholder="Procurar por ID">
+  <input type="submit" class="btn" value="Procurar">
+</form>
+
+<a class="flush" href="/flushall">Apagar todos os usuários</a>
+
+<h2 class="user-section">Usuários já cadastrados na plataforma</h2>
+<div class="users">
+  {{#each users}} 
+    <p>Usuário com ID [{{this.id}}]</p>
+    <ul class="list">
+      <li class="list-item"><strong>Nome: </strong>{{this.nome}}</li>
+      <li class="list-item"><strong>Sobrenome: </strong>{{this.sobrenome}}</li>
+    </ul>
+  {{/each}}
+</div>
+

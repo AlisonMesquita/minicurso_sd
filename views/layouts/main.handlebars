@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Minicurso - Sistemas Distribuídos</title>
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: -20px auto;
+      color: #6F7D8C;
+    }
+
+    .nav {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      background-color: #0C1937;
+    }
+
+    .nav li {
+      padding: 20px;
+    }
+
+    .nav li {
+      color: white;
+      font-size: 1.1em;
+    }
+
+    .nav li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: 0px 60px;
+    }
+
+    /* CSS - Search Users */
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-control {
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      width: 200px;
+      background-color: #6F7D8C;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .flush {
+      width: 135px;
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 10px 32px;
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .user-section {
+      border-top: 3px solid #0C1937;
+      padding-top: 20px;
+    }
+
+    /* CSS - Details */
+    .list {
+      margin-top: -10px;
+    }
+
+    .list-item {
+      list-style: none;
+      border: 1px solid black;
+      padding: 5px;
+      margin: 0px 0px 10px -40px;
+      width: 50%;
+      margin-left: 10px;
+    }
+
+    .btn-del {
+      width: 265px;
+      background-color: red;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <ul class="nav">
+      <li>Minicurso - Sistemas Distribuídos</li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/user/add">Adicionar Usuário</a></li>
+    </ul>
+  </div>
+  
+  <!-- A view será carregada no container abaixo, 'body' é a sintaxe do handlebars para renderizar a view selecionada-->
+  <div class="container">
+    {{{body}}}
+  </div>
+</body>
+
+</html>

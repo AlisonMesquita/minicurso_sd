@@ -1,0 +1,13 @@
+<h1>Adicionar um novo usuário</h1>
+{{#if error}} <span>{{error}}</span>{{/if}}
+
+<form method="POST" action="/user/add">
+  <div class="form-group">
+    <input type="text" name="id" class="form-control" placeholder="ID">
+    <input type="text" name="first_name" class="form-control" placeholder="Primeiro nome">
+    <input type="text" name="last_name" class="form-control" placeholder="Sobrenome">
+    <input type="text" name="email" class="form-control" placeholder="Email">
+    <input type="text" name="phone" class="form-control" placeholder="Telefone">
+  </div>
+  <input type="submit" class="btn" value="Adicionar">
+</form>
